@@ -43,17 +43,17 @@ class Yourclass
   end
 
   def name
-    "Cam"
+    "chubbies"
   end
 
   def choice(record, cooperate_score, defect_score, win_score, lose_score)
       cooperate = false
     if record.length == 0
-      cooperate = false
+      cooperate = true
     elsif (record.last == defect_score) || (record.last == lose_score)
       cooperate = true
     elsif (record.last == cooperate_score) || (record.last == win_score)
-      cooperate = false
+      cooperate = true
     end
     cooperate
   end
@@ -66,7 +66,7 @@ def fight
 
   #-------Enter combatants!------
   player_one = Yourclass.new
-  player_two = Devil.new
+  player_two = Jesus.new
   #------------------------------
 
   player_one_record = []
