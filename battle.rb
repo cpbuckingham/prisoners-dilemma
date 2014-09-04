@@ -43,20 +43,22 @@ class Yourclass
   end
 
   def name
-    "Name"
+    "Cam"
   end
 
   def choice(record, cooperate_score, defect_score, win_score, lose_score)
-    #Code Starts Here!!!
-
-
-
-
-
-
-    #Code Ends Here!!!
+      cooperate = false
+    if record.length == 0
+      cooperate = false
+    elsif (record.last == defect_score) || (record.last == lose_score)
+      cooperate = true
+    elsif (record.last == cooperate_score) || (record.last == win_score)
+      cooperate = false
+    end
+    cooperate
   end
 end
+
 
 
 
